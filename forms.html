@@ -6,35 +6,42 @@
 </head>
 <body>
     <form method="POST" action="https://request-inspector.glitch.me/">
-        Email:  <input type="email" name="email"><br>
-        Password:  <input type="password" name="password"><br>
-        <p>Please write a short bio about yourself:</p>
+        <div>
+            Email:  <input type="email" name="email"><br>
+            Password:  <input type="password" name="password">
+        </div>
+        <div>
+            <p>Please write a short bio about yourself:</p>
             <label for="bio">
                 <textarea rows="4" cols="50" id="bio" name="bio"></textarea>
             </label>
-        <p>How did you hear about us?</p>
-            <label for="billboard">
-                <input id="billboard" type="checkbox" name="hearabout" value="billboard">Billboard
-            </label>
-            <br>
-            <label for="radio-advertisement">
-                <input id="radio-advertisement" type="checkbox" name="hearabout" value="radio-advertisement">Radio Advertisement
-            </label>
-            <br>
-            <label for="internet-advertisement">
-                <input id="internet-advertisement" type="checkbox" name="hearabout" value="internet-advertisement">Internet Advertisement
-            </label>
-            <br>
-            <label for="other">
-                <input id="other" type="checkbox" name="hearabout" value="other">Other
-            </label>
-        <p>Which web browser are you using?</p>
-            <select name="web-browser">
-                <label for="safari"><option id="safari" value="safari">Safari</option></label>
-                <label for="chrome"><option id="chrome" value="chrome" selected>Chrome</option></label>
-                <label for="internet-explorer"><option id="internet-explorer" value="internet-explorer">Internet Explorer</option></label>
-                <label for="edge"><option id="edge"value="edge">Edge</option></label>
-            </select>
+        </div>
+        <div>
+            <p>How did you hear about us?</p>
+                <label for="billboard">
+                    <input id="billboard" type="checkbox" name="hearabout" value="billboard">Billboard
+                </label>
+                <br>
+                <label for="radio-advertisement">
+                    <input id="radio-advertisement" type="checkbox" name="hearabout" value="radio-advertisement">Radio Advertisement
+                </label>
+                <br>
+                <label for="internet-advertisement">
+                    <input id="internet-advertisement" type="checkbox" name="hearabout" value="internet-advertisement">Internet Advertisement
+                </label>
+                <br>
+                <label for="other">
+                    <input id="other" type="checkbox" name="hearabout" value="other">Other
+                </label>
+                <br>
+                <br>
+                <label for="browser">Which Browser are you using?</label>
+                <select name="browser" id="browser">
+                    <option value="chrome">Chrome</option>
+                    <option value="safari">Safari</option>
+                    <option value="firefox">Firefox</option>
+                </select>
+        </div>
         <br>
         <button>Submit</button>
     </form>
