@@ -29,7 +29,7 @@ section:nth-of-type(2) {
     background-color: #ffffff;
 }
 
-section:first-child ul{
+section:first-child ul {
     text-decoration: underline;
 }
 
@@ -37,15 +37,3 @@ section:first-child ul{
     font-weight: normal;
     color: forestgreen;
 }
-
-/*#wrapper :first-child ul  {*/
-    /*text-decoration: underline;*/
-/*}*/
-
-
-
-
-
-/*#wrapper {*/
-    /*background-color: red;*/
-/*}*/
