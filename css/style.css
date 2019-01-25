@@ -1,8 +1,78 @@
+body {
+    margin: 0px;
+    background-image: url("../img/congruent_outline.png");
+    font-family: "Questrial", sans-serif;
+}
+
+h2 {
+    background-color: darkslategray;
+    color: #ffffff;
+    text-decoration: underline;
+    text-align: center;
+}
+
+ul li {
+    list-style-type: circle;
+}
+
+.wrapper {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #fff;
+}
+
+.photos-left img {
+    width: 50%;
+}
+
+.photos-right img {
+    width: 50%;
+}
+
+/*-----------Div to use when working with floats / positioning
+.photos-left {*/
+    /*background-color: red;*/
+/*}*/
+
+
+/*-----------Div to use when working with floats / positioning
+
+.photos-right {*/
+    /*background-color: aqua;*/
+/*}*/
+
+
+
 /*
 --------------HEADER AREA-----------------------
 */
 
+.header-div h1 {
+    padding: 30px 30px;
+    text-align: center;
+}
+
 .fancy-header {
-    color: purple; /* single line comment */
+    color: darkblue;/* single line comment */
     text-decoration: underline;
+}
+
+/*
+--------------TABLE-----------------------------
+*/
+
+table {
+    width: 50%;
+    border: solid 1px darkblue;
+}
+
+table th {
+    padding: 5px 5px;
+    background-color: darkgreen;
+    color: #fff;
+    text-align: left;
+}
+
+table td {
+    padding-top: 20px;
 }
