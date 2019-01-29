@@ -26,7 +26,7 @@ section:nth-child(5) h2 {
 }
 
 section:nth-of-type(2) {
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 section:first-child ul {

@@ -1,0 +1,48 @@
+:root {
+    --box-bgcolor-box1: rgb(209,221,251);
+    --box-bgcolor-box2: rgb(217, 242, 218);
+    --box-bgcolor-box3: #FCFBCA;
+    --box-bgcolor-box4: #EED2D6;
+    --box-textcolor-box1: #302A88;
+    --box-textcolor-box2: #4E7142;
+    --box-textcolor-box3: #8E813A;
+    --box-textcolor-box4: #742E38;
+
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+.message {
+    border-radius: 6px;
+    padding: 10px;
+    margin: 10px
+}
+
+.message-info {
+    color: var(--box-textcolor-box1);
+    background-color: var(--box-bgcolor-box1);
+}
+
+.message-success {
+    color: var(--box-textcolor-box2);
+    background-color: var(--box-bgcolor-box2);
+}
+
+.message-warning {
+    color: var(--box-textcolor-box3);
+    background-color: var(--box-bgcolor-box3);
+}
+
+.message-error {
+    color: var(--box-textcolor-box4);
+    background-color: var(--box-bgcolor-box4);
+
+}
+
+

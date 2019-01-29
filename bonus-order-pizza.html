@@ -2,31 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bonus-order-pizza.css">
     <title>Order A Pizza</title>
 </head>
 <body>
-    <form method="POST" action="https://request-inspector.glitch.me/">
-        <h1>Order A Pizza</h1>
-        <div>
-            <h3>Pick your crust:</h3>
-                <label for="crust1"><input id="crust1" type="radio" name="crust-type" value="hand-tossed">Hand Tossed</label>
-                <label for="crust2"><input id="crust2" type="radio" name="crust-type" value="thin">Thin</label>
-        </div>
-        <div>
-            <h3>Pick your Sauce:</h3>
-            <label for="sauce1"><input id="sauce1" type="radio" name="sauce-type" value="Marinara">Marinara</label>
-            <label for="sauce2"><input id="sauce2" type="radio" name="sauce-type" value="Pesto">Pesto</label>
-        </div>
-        <div>
-            <h3>Pick your toppings:</h3>
-                <label for="topping1"><input id="topping1" type="checkbox" name="toppings" value="pepperoni">Pepperoni</label>
-                <label for="topping2"><input id="topping2" type="checkbox" name="toppings" value="canadian-bacon">Canadian Bacon</label>
-                <label for="topping3"><input id="topping3" type="checkbox" name="toppings" value="onions">Onions</label>
-                <label for="topping4"><input id="topping4" type="checkbox" name="toppings" value="black-olives">Black Olives</label>
-                <label for="topping5"><input id="topping5" type="checkbox" name="toppings" value="mushrooms">Mushrooms</label>
-                <label for="topping6"><input id="topping6" type="checkbox" name="toppings" value="garlic">Garlic</label>
-                <label for="topping7"><input id="topping7" type="checkbox" name="toppings" value="pepperoni">Bell Pepper</label>
-        </div>
-    </form>
+    <div id="wrapper">
+        <header>
+            <h1>Brody's Pizzeria</h1>
+            <p>Brody's Pizza specializes in authentic Italian brick oven pizza.</p>
+        </header>
+        <main>
+            <h2>Order A Pizza</h2>
+            <form method="POST" action="https://request-inspector.glitch.me/">
+                <section>
+                    <h3>Pick your crust:</h3>
+                    <label for="crust1"><input id="crust1" type="radio" name="crust-type" value="hand-tossed">Hand Tossed</label>
+                    <br>
+                    <label for="crust2"><input id="crust2" type="radio" name="crust-type" value="thin">Thin</label>
+                </section>
+                <section>
+                    <h3>Pick your sauce:</h3>
+                    <label for="sauce1"><input id="sauce1" type="radio" name="sauce-type" value="Marinara">Marinara</label>
+                    <br>
+                    <label for="sauce2"><input id="sauce2" type="radio" name="sauce-type" value="Pesto">Pesto</label>
+                </section>
+                <section>
+                    <h3>Pick your toppings:</h3>
+                        <label for="topping1"><input id="topping1" type="checkbox" name="toppings" value="pepperoni">Pepperoni</label>
+                        <label for="topping2"><input id="topping2" type="checkbox" name="toppings" value="canadian-bacon">Canadian Bacon</label>
+                        <label for="topping3"><input id="topping3" type="checkbox" name="toppings" value="onions">Onions</label>
+                        <br>
+                        <label for="topping4"><input id="topping4" type="checkbox" name="toppings" value="black-olives">Black Olives</label>
+                        <label for="topping5"><input id="topping5" type="checkbox" name="toppings" value="mushrooms">Mushrooms</label>
+                        <label for="topping6"><input id="topping6" type="checkbox" name="toppings" value="garlic">Garlic</label>
+                        <br>
+                        <label for="topping7"><input id="topping7" type="checkbox" name="toppings" value="pepperoni">Bell Pepper</label>
+                        <label for="topping8"><input id="topping8" type="checkbox" name="toppings" value="spinach">Spinach</label>
+                        <label for="topping9"><input id="topping9" type="checkbox" name="toppings" value="pineapple">Pineapple</label>
+                </section>
+                <section>
+                    <h3>Your Details:</h3>
+                    First name:<input type="text" name="first-name"><br>
+                    Last name:<input type="text" name="last-name"><br>
+                    <br>
+                    Address:<input type="text" name="address"><br>
+                    <br>
+                </section>
+                <button>Order Pizza</button>
+            </form>
+        </main>
+    </div>
 </body>
 </html>
