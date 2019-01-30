@@ -1,0 +1,33 @@
+.bluebox {
+    width: 100px;
+    height: 200px;
+    background-color: blue;
+    float: left;
+    position: relative;
+}
+
+.whitebox {
+    width: 225px;
+    height: 100px;
+    background-color: white;
+    float: left;
+}
+
+.redbox {
+    width: 225px;
+    height: 100px;
+    background-color: red;
+    float: left;
+}
+
+#wrapper {
+    width: 325px;
+    float: left;
+}
+
+#star {
+    font-size: 100px;
+    color: white;
+    position: absolute;
+    top: 20px;
+}

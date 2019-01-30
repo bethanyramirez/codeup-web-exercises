@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*----------------------------------
+
+            Navigation
+
+-----------------------------------*/
+
+nav {
+    background-color: #5067AF;
+    height: 50px;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0 .75em;
+    border-right: 1px solid #485D9C;
+}
+
+input {
+    width: 300px;
+    height: 20px;
+    line-height: 50px;
+}
+
+
+.nav-inline {
+    display: inline-block;
+}
+
+/*----------------------------------
+
+          Left Aside
+
+-----------------------------------*/
+
+
+
+.side-links-container {
+    float: left;
+    width: 20%;
+    border: 1px solid red;
+}
+
+aside li {
+    list-style-type: none;
+    padding: .4em 0;
+}
+/*----------------------------------
+
+              Main
+
+-----------------------------------*/
+
+h4 {
+    background-color: #F5F6F7;
+    margin: 0.4em;
+}
+
+main input {
+    height: 5em;
+}
+
+.main-first-section {
+    float: left;
+    width: 60%;
+    background-color: #fff;
+    border: 1px solid blue;
+}
+
+main input, main button {
+    float: left;
+}
+
+main button {
+    clear: left;
+}
