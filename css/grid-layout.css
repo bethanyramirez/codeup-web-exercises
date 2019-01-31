@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.row {
+    width: 100%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*------------------------------------
+
+       Commented out styling below
+       to see columns
+
+ ------------------------------------*/
+
+
+/*.column {*/
+    /*border: 1px solid black;*/
+    /*background-color: #848487;*/
+/*}*/
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media screen and (min-width: 500px) {
+    .one-half,
+    .one-third,
+    .one-fourth,
+    .one-eighth {
+        float: left;
+        width: 100%;
+        padding: 0 10px;
+
+}
+
+/* Large devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+
+    .column.one-half {
+        width: 50%;
+    }
+
+    .column.one-third {
+        width: 33.33%;
+    }
+
+    .column.one-fourth {
+        width: 25%;
+    }
+
+    .column.one-eighth {
+        width: 12.5%;
+    }
+}
+
