@@ -89,3 +89,31 @@ var userNameLess20Char = username.length < 20;
 var trimmedUsername = username.trim();
 
 var trimmedPassword = password.trim();
+
+(function() {
+function isShortWord(string) {
+    return string.length < 5;
+}
+
+console.log("The string is less than 5: " + isShortWord("bethany"));
+
+
+
+function isSameLength(str1,str2) {
+    return str1.length === str2.length;
+}
+
+console.log("The string lengths are the same: " + isSameLength("bob","cat");
+/* above code evaluates to true */
+
+
+function getSmallerSegment(string, number) {
+    return string.substring(0, number).toLowerCase();
+}
+
+console.log(getSmallerSegment("Codeup",3)); //"cod"
+
+
+
+
+})(); // end of IIFE
