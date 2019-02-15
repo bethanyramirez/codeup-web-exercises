@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bonus Arrays</title>
+</head>
+<body>
+
+
+<script>
+
+
+    /** ====================ARRAYS=====================-
+        6.	Write a function that returns the sum of an array of numbers
+    7.	Create a student roster management app. Using the user dialogue functions (alert, confirm, prompt), create an application that will prompt the user to choose from a menu with the following actions:
+        1) add a student
+    2) delete a student
+    3) view all students in alphabetical order
+    4) view all students in reverse alphabetical **/
+
+    //----------Bonus #6 ------------//
+
+    // function returnSumOfArray() {
+    //
+    //     var sum = 0;
+    //     var numbers = [0, 1, 2, 3, 4, 5, 6];
+    //
+    //     for(var i = 0; i < numbers.length; i++) {
+    //
+    //           sum += numbers[i];
+    //     }
+    //
+    //     return sum;
+    //
+    // }
+    //
+    // console.log(returnSumOfArray());
+
+
+
+    //----------Bonus #6 part b ------------//
+
+
+
+    // var someNumbers = [3, 3, 3, 3, 3, 3, 2];
+    //
+    //
+    // function returnSumOfArray(array) {
+    //
+    //     var sum = 0;
+    //
+    //     for(var i = 0; i < array.length; i++) {
+    //
+    //         sum += array[i];
+    //     }
+    //
+    //     return sum;
+    //
+    // }
+    //
+    // console.log(returnSumOfArray(someNumbers));
+
+
+
+
+    //----------Bonus #6 ------------//
+
+
+
+
+    var userMenuAction = prompt("Choose from the options below by typing the corresponding number: \n1- Add a student \n2- Delete a student \n3- View all students in alphabetical order \n4- View all students in reverse alphabetical order.");
+
+    var nameToAdd;
+    var nameToDelete;
+    var spliceStudent;
+
+    var students = ["michelle",
+        "julia",
+        "jennifer",
+        "vanessa",
+        "tori",
+        "justin",
+        "dan",
+        "susie",
+        "todd"];
+
+    if(userMenuAction === "1") {
+
+        nameToAdd = prompt("Enter the name of the student you want to add");
+
+        students.push(nameToAdd);
+
+        console.log(students);
+
+    } else if(userMenuAction === "2") {
+
+        nameToDelete = prompt("Enter the name of the student you want to delete");
+
+        spliceStudent = students.indexOf(nameToDelete);
+
+        students.splice(spliceStudent, 1);
+
+        console.log(students);
+
+    } else if(userMenuAction === "3") {
+
+        alert("Here are all the students enrolled alphabetically: \n\n " + students.sort());
+
+    } else if(userMenuAction === "4") {
+
+        students.sort();
+
+        alert("Here are all the students enrolled alphabetically: \n\n " + students.reverse());
+    }
+
+
+
+
+</script>
+</body>
+</html>
