@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    // var coffee = {
+    //
+    //     brandName: "Starbucks",
+    //     type: "Light Roast",
+    //     volumeInLiters: 0.23,
+    //     priceInCents: 2.50,
+    //     expirationDate: 02/15/20,
+    //     dateTimesOfLastSips: 02/14/19,
+    //     isOpen: false
+    //
+    // }
+    //
+    // var coffee2 = {};
+    //
+    //     coffee2.brandName: "Starbucks";
+    //     coffee2.type: "Light Roast";
+    //     coffee2.volumeInLiters: 0.23;
+    //     coffee2.priceInCents: 2.50;
+    //     coffee2.expirationDate: 02/15/20;
+    //     coffee2.dateTimesOfLastSips: 02/14/19;
+    //     coffee2.isOpen: false;
+    //
+    //
+    //
+    // console.log(coffee.brandName);
+    //
+    //
+    // var kombucha = {
+    //
+    //     brandName: "Health-Ade Kombucha",
+    //     type: "Pink Lady Apple",
+    //     volumeInLiters: 0.35,
+    //     priceInCents: 350,
+    //     expirationDate: 03/15/19,
+    //     dateTimesOfLastSips: 01/14/19,
+    //     isOpen: false;
+    //
+    // }
+
+
+    // var users = [
+    //     {
+    //         name: "Sam",
+    //         age: 21
+    //     },
+    //     {
+    //         name: "Cathy",
+    //         age: 34
+    //     },
+    //     {
+    //         name: "Karen",
+    //         age: 43
+    //     }
+    // ];
+    //
+    //
+    //
+    // 1. Log the names of all users in a single console log seperated by spaces.
+    //
+    //
+    // users.forEach(function(element) {
+    //
+    //     console.log(element.name);
+    // })
+    //
+    //
+    // for (var i = 0; i < users.length; i++) {
+    //
+    //     console.log(users[i].name);
+    // }
+    //
+    //
+    // 2. Change the names of all users to "John Doe"
+    //
+    // users.forEach(function(element) {
+    //
+    //     console.log(element.name = "John Doe");
+    // })
+    // //
+    // for (var i = 0; i < users.length; i++) {
+    //
+    //     console.log(users[i].name = "John Doe");
+    // }
+    //
+    //
+
+    // 3. Increase the current age of all users by 1
+    //
+    // users.forEach(function(element) {
+    //
+    //     console.log(element.age += 1);
+    // })
+    //
+    //
+    for (var i = 0; i < users.length; i++) {
+
+        console.log(users[i].age += 1);
+    }
+
+    //
+    //
+
+// array of objects with properties for date and typeOfShot)
+
+    // Can you accomplish each step using iteration? YES
+
+
+
+    var dog = {
+
+        breed: "Golden Doodle",
+        weightInPounds: 45,
+        age: 5,
+        color: "Golden",
+        sterilized: true,
+        shotRecords: [
+            {
+                type: "rabies",
+                dateVaccinated: "01/01/19",
+            },
+
+            {
+                type: "parvo",
+                dateVaccinated: "01/01/19",
+            }
+
+        ],
+        bark: function () {
+            console.log("woof!");
+            },
+        getOlder: function () {
+            console.log("Here is the new age: " + (this.age += 1));
+        },
+        fix: function () {
+
+            if(this.sterilized === true) {
+
+                console.log(this.sterilized = false);
+            }
+        },
+        vaccinate: function (nameOfShot, currentDate) {
+
+            this.shotRecords.push({type: nameOfShot, dateVaccinated: currentDate});
+        }
+    };
+
+
+dog.bark();
+dog.getOlder();
+dog.fix();
+dog.vaccinate("hepatitis", "02/28/18");
+console.log(dog);
+
+</script>
+</body>
+</html>

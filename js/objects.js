@@ -13,13 +13,11 @@
      */
 
 
-    var person = {
-        firstName: "Bethany",
-        lastName: "Ramirez,"
-    }
-
-
-
+    // var person = {
+    //     firstName: "Bethany",
+    //     lastName: "Ramirez",
+    //     sayHello: sayHello
+    // };
 
 
 
@@ -33,6 +31,15 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
+
+    // function sayHello(){
+    //     return "Hello from " + person.firstName + " " + person.lastName + "!";
+    // }
+    //
+    // console.log(person.sayHello());
+
+
+
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -45,13 +52,44 @@
      * Uncomment the lines below to create an array of objects where each object
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
-     */
+     *
+     *
+     * Name paid $111 originally which gives him a discount of 15%. His price with discount is $90
+     * */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {
+            name: 'Cameron',
+            amount: 180
+        },
+        {
+            name: 'Ryan',
+            amount: 250
+        },
+        {
+            name: 'George',
+            amount: 320
+        }
+    ];
+
+    var discount = 0.15;
+    var discountedPrice;
+
+
+    for (var i = 0; i < shoppers.length; i++) {
+
+        var originalPrice = shoppers[i].amount;
+
+        if (shoppers[i].amount > 200) {
+
+            discountedPrice = shoppers[i].amount - (shoppers[i].amount * .20);
+            console.log(shoppers[i].name + "'s total:  " + originalPrice + "." + "  The discount is:  " + discount + ". Discounted Price:  " + discountedPrice);
+        }
+
+    }
+
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
