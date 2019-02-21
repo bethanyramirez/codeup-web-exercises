@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Calculator</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="bonus-js-calc-css.css">
+</head>
+
+<body>
+<div class="title-box">
+    <span id="js">JS</span><br>
+    Calculator
+</div>
+<div class="container">
+    <form>
+        <h1>Math Things</h1>
+        <div class="row">
+            <div class="col">
+                <input id="left-operand" type="text" name="left-operand">
+            </div>
+            <div class="col">
+                <input id="operator" type="text" name="operator">
+            </div>
+            <div class="col">
+                <input id="right-operand" type="text" name="right-operand">
+            </div>
+        </div>
+        <div class="row calc-numbers">
+            <div class="col">
+                <input class="numbers" id="1" value="1" type="button">
+            </div>
+            <div class="col">
+                <input class="numbers" id="2" value="2" type="button">
+            </div>
+            <div class="col">
+                <input class="numbers" id="3" value="3" type="button">
+            </div>
+            <div class="col">
+                <input class="operand" id="plus" value="+" type="button">
+            </div>
+        </div>
+        <div class="row calc-numbers">
+            <div class="col">
+                <input class="numbers" id="4" value="4" type="button">
+            </div>
+            <div class="col">
+                <input class="numbers" id="5" value="5" type="button">
+            </div>
+            <div class="col">
+                <input class="numbers" id="6" value="6" type="button">
+            </div>
+            <div class="col">
+                <input class="operand" id="minus" value="-" type="button">
+            </div>
+        </div> <!--end of row-->
+        <div class="row calc-numbers">
+            <div class="col">
+                <input class="numbers" id="7" value="7" type="button">
+            </div>
+            <div class="col">
+                <input class="numbers" id="8" value="8" type="button">
+            </div>
+            <div class="col">
+                <input class="numbers" id="9" value="9" type="button">
+            </div>
+            <div class="col">
+            <input class="operand" id="times" value="*" type="button">
+            </div>
+        </div>
+        <div class="row calc-numbers">
+            <div class="col">
+                <input id="clear" value="C" type="button">
+            </div>
+            <div class="col">
+                <input id="0" value="0" type="button">
+            </div>
+            <div class="col">
+                <input id="equals" value="=" type="button">
+            </div>
+            <div class="col">
+                <input class="operand" id="divide" value="/" type="button">
+            </div>
+        </div>
+    </form>
+</div> <!---end of container--->
+<script src="js/bonus-js-calculator-js.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

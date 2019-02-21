@@ -33,7 +33,7 @@
 
 
     // function sayHello(){
-    //     return "Hello from " + person.firstName + " " + person.lastName + "!";
+    //     return "Hello from " + this.firstName + " " + this.lastName + "!";
     // }
     //
     // console.log(person.sayHello());
@@ -83,6 +83,7 @@
         if (shoppers[i].amount > 200) {
 
             discountedPrice = shoppers[i].amount - (shoppers[i].amount * .20);
+
             console.log(shoppers[i].name + "'s total:  " + originalPrice + "." + "  The discount is:  " + discount + ". Discounted Price:  " + discountedPrice);
         }
 
@@ -103,6 +104,55 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+
+    var books = [
+        {
+             title: "Genesis",
+             writer: "Moses",
+             setting: {
+                 placeWritten: "Wilderness",
+                 timeCovered: "In the beginning - 1657 B.C.E"
+             }
+        },
+        {
+            title: "1 Kings",
+            writer: "Jeremiah",
+            setting: {
+                placeWritten: "Judah",
+                timeCovered: "c. 1040 - 911"
+            }
+        },
+        {
+            title: "Micah",
+            writer: "Micah",
+            setting: {
+                placeWritten: "Judah",
+                timeCovered: "b. 717"
+            }
+        },
+        {
+            title: "Acts",
+            writer: "Luke",
+            setting: {
+                placeWritten: "Rome",
+                timeCovered: "33-c 61 C.E."
+            }
+        },
+        {
+            title: "Romans",
+            writer: "Paul",
+            setting: {
+                placeWritten: "Corinth",
+                timeCovered: "c. 56"
+            }
+        }
+    ];
+
+
+
+
+
 
     /**
      * TODO:
@@ -129,15 +179,53 @@
      *      ...
      */
 
+
+
+    books.forEach(function(book, i) {
+
+        console.log("Book # " + (i + 1) + "\nTitle:  " + book.title + "\nWriter:  " + book.writer + "\n----");
+
+    });
+
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
      *   name and returns a book object with the properties described
      *   previously. Refactor your code that creates the books array to instead
      *   use your function.
-     * - Create a function named `showBookInfo` that accepts a book object and
-     *   outputs the information described above. Refactor your loop to use your
-     *   `showBookInfo` function.
-     */
+     **/
+
+
+    function createBook(title, firstName, lastName) {
+
+        var book = {};
+        book.title = title;
+        book.author = {};
+        book.author.firstName = firstName;
+        book.author.firstName = firstName;
+
+        return book;
+    }
+
+    createBook("Revelation", "Apostle John");
+
+     /**
+    //  * - Create a function named `showBookInfo` that accepts a book object and
+    //  *   outputs the information described above. Refactor your loop to use your
+    //  *   `showBookInfo` function.
+    //  */
+    //
+    //
+    // function showBookInfo(bookObject) {
+    //
+    //     books.forEach(function(element,index,array){
+    //
+    //         console.log(element);
+    //     })
+    //  }
+    //
+    //
+    // showBookInfo(books);
 
 })();
