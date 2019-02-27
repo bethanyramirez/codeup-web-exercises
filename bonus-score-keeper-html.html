@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Score Keeper App</title>
+    <style>
+        .winner {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1><span id="p1-display">0</span> to <span id="p2-display">0</span></h1>
+    <input type="text" id="input">
+    <button id="p1-score">Player 1</button>
+    <button id="p2-score">Player 2</button>
+    <button id="reset">Reset</button>
+<script>
+    "use strict";
+
+
+    var p1Button = document.getElementById("p1-score");
+    var p2Button = document.getElementById("p2-score");
+    var p1Display = document.getElementById("p1-display");
+    var p2Display = document.getElementById("p2-display");
+    var resetButton = document.getElementById("reset");
+    var customScore = document.getElementById("input");
+    var p1Score = 0;
+    var p2Score = 0;
+    var gameOver = false;
+    var winningScore = 5;
+
+
+
+    p1Button.addEventListener("click", function(){
+        if(!gameOver) {
+            p1Score++;
+            if(p1Score === winningScore) {
+                p1Display.classList.add("winner");
+                gameOver = true;
+            }
+                p1Display.textContent = p1Score;
+        }
+    },false);
+
+    p2Button.addEventListener("click", function(){
+        if(!gameOver) {
+            p2Score++;
+            if(p2Score === winningScore) {
+                p2Display.classList.add("winner");
+                gameOver = true;
+            }
+                p2Display.textContent = p2Score;
+        }
+    },false);
+
+    resetButton.addEventListener("click", function(){
+        p1Score = 0;
+        p2Score = 0;
+        p1Display.textContent = p1Score;
+        p2Display.textContent = p2Score;
+        p1Display.classList.remove("winner");
+        p2Display.classList.remove("winner");
+        gameOver = false;
+
+    },false);
+
+    customScore.addEventListener("keyup", function(){
+        winningScore = +input.value;
+    })
+
+
+</script>
+</body>
+</html>

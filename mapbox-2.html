@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maps!</title>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+<div id='map' style='width: 100%; height: 400px;'></div>
+
+<script src="js/keys-js.js"></script>
+
+<script>
+    mapboxgl.accessToken = mapBoxAccessToken; //available in keys-js
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 17,
+        center: [-77.0502, 38.8893]
+
+    });
+
+    //
+    // var marker = new mapboxgl.Marker();   //dont have to pass anything through marker
+    //
+    // marker.setLngLat([-77.0502, 38.8893]);
+    // marker.addTo(map);
+    //
+    // var alamoPopup = new mapboxgl.Popup()
+    // .setLngLat([1222,333])
+    // .setHTML("<h1>Stuff Here</h1>")
+    // .addTo(map);
+    //
+    //
+    // marker.setPopup(alamoPopup); //this variable that is getting passed in has to be a popup OBJECT
+</script>
+
+
+</body>
+</html>

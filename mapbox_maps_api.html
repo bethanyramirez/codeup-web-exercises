@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+<div id='map' style='width: 80%; height: 600px;'></div>
+<script src="js/keys-js.js"></script>
+<!---Geocode Util--->
+<script src="js/mapbox-geocoder-utils.js"></script>
+
+<!----mapbox--->
+<script>
+    var restaurants = [
+        {
+            name: "The Hoppy Monk",
+            address: "1010 N Loop 1604 E. San Antonio, TX 78232",
+            phoneNumber: "(210)545-3330"
+        },
+        {
+            name: "5 Points Local",
+            address: "1017 N Flores St, San Antonio, TX 78212",
+            phoneNumber: "(210)267-2652"
+        },
+        {
+            name: "Jerusalem Grill",
+            address: "3259 Wurzbach Rd, San Antonio, TX 78238",
+            phoneNumber: "(210)680-8400"
+        }
+    ];
+
+    restaurants.forEach(function(restaurant){
+
+        geocode(restaurant.address, mapBoxAccessToken).then(function(data) {
+            var marker = new mapboxgl.Marker();
+            marker.setLngLat(data);
+            marker.addTo(map);
+
+            var popup = new mapboxgl.Popup()
+                .setHTML("<h1>" + restaurant.name + "</h1><p>" + restaurant.address + "</p>");
+
+            marker.setPopup(popup);
+
+        });
+    });
+
+    mapboxgl.accessToken = mapBoxAccessToken;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 9,
+        center: [-98.4936, 29.4241]
+    });
+
+</script>
+
+</body>
+</html>

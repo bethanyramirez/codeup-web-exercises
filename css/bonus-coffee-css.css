@@ -1,0 +1,49 @@
+body {
+    background-image: url("../img/mountain-fog.jpeg");
+    background-size: cover;
+    color: #422b22;
+}
+
+h4 {
+    font-family: 'Cinzel', serif;
+}
+
+.btn-secondary {
+    background-color: #c94820;
+    color: #fff;
+}
+
+.bg-beige {
+    background-color: #fffbf0;
+}
+
+
+.badge-light {
+    background-color: #8bc34a66;
+}
+
+.badge-secondary {
+    background-color: #3b8e3f;
+}
+
+.badge-dark {
+    background-color: #174c19;
+}
+
+
+
+.badge-secondary, .badge-light, .badge-dark {
+    font-weight: normal;
+}
+
+
+#logo {
+    max-width: 250px;
+    height: 250px;
+
+}
+
+input#add-coffee-submit, input#submit {
+    background-color: #436576;
+    color: #fff;
+}
