@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ajax Blog</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            resize: none;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Codeup Blog</h1>
+        <hr>
+        <div class="row">
+            <div id="posts" class="col">
+
+            </div>
+            <!--<div id="right-aside" class="col-4">-->
+
+            <!--</div>-->
+        </div>
+
+
+        <div id="write-blog-div">
+            <h3>Write a Blog Post</h3>
+            <form>
+                <input type="text" id="new-post-title">
+                <textarea id="blog-post"></textarea>
+            </form>
+        </div>
+
+        <button id="publish" class="btn-primary">Publish</button>
+    </div>
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+        "use strict";
+        var response = $.ajax("data/blog.json");
+        response.done(function (data, status, jqXhr) {
+
+            console.log(data);
+            // $("#posts").html(data);
+
+
+            for (var i = 0; i < data.length; i++) {
+                $("#posts").append("<div><h2>" + data[i].title + "</h2></div>"
+                    + "<div>" + data[i].content + "</div><br>"
+                    + "<div>" + "Categories: " + data[i].categories + " Date: " + data[i].date +"</div><hr>");
+            }
+        });
+
+        $("#publish").on("click", function() {
+           var newPost = $("#blog-post").val();
+           var postTitle = $("#new-post-title").val();
+           response.done(function(data) {
+               console.log("lookhere" + data);
+               $("#posts").append("<h2>" + postTitle + "</h2>" + newPost + "<hr>");
+           })
+        })
+    </script>
+</body>
+</html>

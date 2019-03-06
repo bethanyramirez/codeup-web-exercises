@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .visibility {
+            display: none;
+        }
+
+        #kcode-div {
+            width: 50%;
+            height: auto;
+            margin: 0 auto;
+            border: 3px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Konami Code</h1>
+
+    <div id="kcode-div" class="visibility">
+        <h1>Konami Code Initialized!</h1>
+    </div>
+
+    <script
+            src="http://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+
+
+    <script>
+
+        /**Allow the user to enter the Konami Code: "↑ ↑ ↓ ↓ ← → ← → b a enter" (the return key)
+         *
+         */
+
+
+
+        $(document).ready(function() {
+
+            var userKeyed = [];
+            var kCodeFirstThird = [38,38,40];
+            var kCodeSecondThird = [40,37,39,37];
+            var konamiCode = [38,38,40,40,37,39,37,39,66,65,13];
+            var count = 0;
+
+
+            $(document).on("keydown", function(e){
+
+
+                userKeyed.push(e.which);
+
+
+                if(userKeyed.toString().includes(kCodeFirstThird.toString())) {
+                    // alert("finish the konami code. HINT: the next move is arrow down");
+
+                    $("#kcode-div").removeClass("visibility");
+
+                }
+
+                if(userKeyed.toString().includes(kCodeSecondThird.toString())) {
+
+
+                    $("body").css("background-color", "blue");
+
+                }
+
+                if(userKeyed.toString().includes(konamiCode.toString())) {
+
+
+                    $("body").css("background-image", "url('img/cat.jpg')");
+
+                }
+
+            });
+
+        });
+    </script>
+</body>
+</html>

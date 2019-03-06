@@ -6,6 +6,27 @@
 </head>
 <body>
 
+    <h1>Codeup Adventure</h1>
+    <p class="codeup" >Documenting the journey...</p>
+
+    <h3 class="codeup">Technical things learned so far:</h3>
+    <ol class="tech-skills">
+        <li>HTML</li>
+        <li id="css">CSS</li>
+        <li>Bootstrap 4</li>
+        <li>Javascript</li>
+    </ol>
+
+    <div>
+        <h3 class="codeup">Soft Skills that have been sharpened:</h3>
+        <ul class="soft-skills">
+            <li>How to Breathe</li>
+            <li id="patience">Patience</li>
+            <li>Communication</li>
+        </ul>
+    </div>
+
+
 <script
         src="http://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -15,7 +36,23 @@
 
     $(document).ready(function() {
 
-        alert("DOM finished loading!");
+        $("h1").click(function(){
+           $("h1").css("background-color","yellow");
+        });
+
+        $("p").dblclick(function(){
+            $(this).css("font-size","18px");
+        });
+
+        $('li').hover(
+            function() {
+                $(this).css('color', 'red');
+            },
+            function() {
+                $(this).css('color', 'black');
+            }
+        );
+
 
     });
 </script>

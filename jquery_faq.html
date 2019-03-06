@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+
+        body {
+            margin: 0 2em;
+        }
+        button {
+            float: left;
+        }
+        .invisible {
+            visibility: hidden;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        .frame-div {
+            width: 20%;
+            height: 15em;
+            border: 10px solid saddlebrown;
+            float: left;
+            margin: 1em;
+
+
+        }
+
+        .plants {
+            background-image: url("https://static1.squarespace.com/static/53a6084ee4b0202540ec7571/t/568757db2399a3a3e5fbe808/1451710428613/Cactus+Print+by+Justina+Blakeney?format=1000w");
+        }
+
+        .cactus {
+            background-image: url("https://thumbs.dreamstime.com/z/cactus-pattern-watercolor-style-seamless-tropical-wallpaper-79709147.jpg");
+        }
+
+        .flowers {
+            background-image: url("https://wallimpex.com/data/out/584/floral-image-9451059.jpg");
+        }
+
+        #btn1 {
+            float: left;
+            clear: left;
+        }
+
+        #test-div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background-color: red;
+            clear: left;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        /*#left-frame {*/
+            /*background-image: url("https://static1.squarespace.com/static/53a6084ee4b0202540ec7571/t/568757db2399a3a3e5fbe808/1451710428613/Cactus+Print+by+Justina+Blakeney?format=1000w");*/
+        /*}*/
+
+        /*#middle-frame {*/
+            /*background-image: url("https://thumbs.dreamstime.com/z/cactus-pattern-watercolor-style-seamless-tropical-wallpaper-79709147.jpg");*/
+        /*}*/
+
+        /*#right-frame {*/
+            /*background-image: url("https://wallimpex.com/data/out/584/floral-image-9451059.jpg");*/
+        /*}*/
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <!--&lt;!&ndash; Modal &ndash;&gt;-->
+    <!--<div class="modal fade" id="modal-newsletter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">-->
+        <!--<div class="modal-dialog modal-dialog-centered" role="document">-->
+            <!--<div class="modal-content">-->
+                <!--<div class="modal-header">-->
+                    <!--<h5 class="modal-title" id="exampleModalCenterTitle">Newsletter</h5>-->
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+                        <!--<span aria-hidden="true">&times;</span>-->
+                    <!--</button>-->
+                <!--</div>-->
+                <!--<div class="modal-body">-->
+                    <!--Would you like to sign up for our newsletter?-->
+                <!--</div>-->
+                <!--<div class="modal-footer">-->
+                    <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>-->
+                    <!--<button type="button" class="btn btn-primary">Yes</button>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div> &lt;!&ndash;-end of bootstrap modal &ndash;&gt;-->
+
+
+
+
+<h3>National Park Facts</h3>
+
+<dl>
+
+<dt id="dt1">Acadia National Park</dt>
+    <dd id="dd1">In the National Park System, there are 407 sites covering more than 84 million acres of land. </dd>
+
+<dt>Arches National Park</dt>
+    <dd>There are more than 2,000 documented arches in the national park, some spanning up to 300 feet.</dd>
+
+<dt>Badlands National Park</dt>
+    <dd>The Badlands are home to the largest known cluster of late Eocene and Oligocene mammal fossils.</dd>
+<dt>Biscayne National Park</dt>
+    <dd>Six shipwrecks over nearly a century have been mapped on Bicayne National Park's Maritime Heritage Trail.</dd>
+<dt>Black Canyon of the Gunnison National Park</dt>
+    <dd>Sculpted over two million years with the help of the Gunnison River and forces of weather, the Black Canyon is a staggering 48 miles long.</dd>
+<dt>Biscayne National Park</dt>
+    <dd>Six shipwrecks over nearly a century have been mapped on Bicayne National Park's Maritime Heritage Trail.</dd>
+<dt>Canyonlands National Park</dt>
+    <dd>Horseshoe Canyon contains some of the most significant rock art in North America, including the intricate life-sized figures of the Great Gallery.</dd>
+<dt>Capitol Reef National Park</dt>
+    <dd>Congaree National Park hosts the largest intact expanse of old growth bottomland hardwood forest in the southeastern United States.</dd>
+<dt>Congaree National Park</dt>
+    <dd>Horseshoe Canyon contains some of the most significant rock art in North America, including the intricate life-sized figures of the Great Gallery.</dd>
+<dt>Death Valley National Park</dt>
+    <dd>Horseshoe Canyon contains some of the most significant rock art in North America, including the intricate life-sized figures of the Great Gallery.</dd>
+</dl>
+
+<a href="#">Click This</a>
+
+<h3>Big Bend National Park</h3>
+<ul>
+    <li>The name Big Bend comes from a large bend in the Rio Grande River along the park boundary.</li>
+    <li>In 2012, the park was named as an International Dark Sky Park. Big Bend National Park has the darkest measured skies in the lower 48 states, and star gazing here is obviously superb.
+    </li>
+    <li>Floating the Rio Grande River, especially through Santa Elena Canyon, is a popular activity. Since the international border is officially in the middle of the river, these trips are treated as international trips by authorities, and proper documentation (i.e. a passport) is required.</li>
+    <li>The large range of elevations in the park contribute to its biological diversity. There are 56 species of reptiles, 75 species of mammals, more than 450 species of birds, along with at least 1,200 species of plants.
+    </li>
+</ul>
+<h3>Yosemite National Park</h3>
+<ul>
+    <li>Yosemite might be our nation’s 3rd national park, but it sparked the idea of national parks. Twenty-six years before it was a national park, President Lincoln signed the Yosemite Land Grant on June 30, 1864, protecting the Mariposa Grove and Yosemite Valley. It was the first time the government protected land because of its natural beauty so that people could enjoy it, and we’re still benefiting from their foresight today.</li>
+    <li>Yosemite’s granite rock formations glow like fire at sunset. Sunlight plays amazing tricks at Yosemite -- illuminating El Capitan and Half Dome in brilliant reds and oranges. Horsetail Fall is famous for appearing to be on fire when it reflects the orange glow of sunset in mid- to late-February. It’s a spectacular sight reminiscent of Yosemite’s historic Firefall, which occurred nightly until 1968, when hotel operators would push campfire embers over Glacier Point to wow park goers.</li>
+    <li>The park’s diverse landscape supports more than 400 species. While at Yosemite, look all around and you might spy one of the park’s many amphibians, reptiles, birds and mammals looking back. One such animal is the rare Sierra Nevada red fox, which was spotted for the first time in nearly 100 years on a wildlife cam, roaming the high elevations of California’s Sierra Nevada.
+
+    </li>
+    <li>Yosemite is home to one of the tallest waterfalls in the world. At 2,425 feet, Yosemite Falls is one of tallest on the planet, but did you know, it’s actually made up of three separate falls? Upper Yosemite Fall, the middle cascades and Lower Yosemite Fall makeup Yosemite Falls, which can be seen from numerous places around Yosemite Valley.</li>
+</ul>
+<h3>Yellowstone National Park</h3>
+<ul>
+    <li>Yellowstone is bigger than two U.S. states</li>
+    <li>The park sits atop the largest supervolcano in North America.</li>
+    <li>Yellowstone was originally nicknamed “Wonderland.”</li>
+    <li> Yellowstone includes the nation’s oldest herd of bison.</li>
+</ul>
+
+<button id="change-bg">Change background color</button>
+<br>
+<div id="frame-holder">
+    <div id="left-frame" class="frame-div plants"></div>
+    <div id="middle-frame" class="frame-div cactus"></div>
+    <div id="right-frame" class="frame-div flowers"></div>
+</div>
+<div>
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Swap</button>
+    <button id="btn3">Swap</button>
+</div>
+    <!----TEST STUFF---->
+
+    <div id="test-div">
+
+    </div>
+<script
+        src="http://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+
+<script>
+
+    // $(document).ready(function() {
+    //
+    //   $("dd").toggleClass("invisible");
+    //
+    // });
+
+    $(document).ready(function() {
+
+        $('a').click(function(event) {
+
+            $('dd').toggleClass('invisible');
+        });
+
+
+        $("#exit").on("click", function() {
+
+            $("#newsletter-div").hide();
+        });
+
+        $("#change-bg").on("click", function() {
+            $("ul").children().css("background-color","yellow")
+        });
+
+        $("h3").on("click", function() {
+            $(this).next().css("font-weight","bold")
+            $(this).next().slideToggle()
+        });
+
+        $("li").on("click", function () {
+            $(this).parent().children().first().css("color","blue")
+        });
+
+        setTimeout(function() {
+            $("#modal-newsletter").modal("show");
+        }, 8000);
+
+        /** bonus functionality **/
+
+        $("#btn1").on("click", function() {
+
+            if($("#left-frame").hasClass("plants")) {
+                $("#left-frame").removeClass("plants").addClass("cactus");
+                $("#middle-frame").removeClass("cactus").addClass("plants")
+            } else if ($("#left-frame").hasClass("cactus")){
+                $("#left-frame").removeClass("cactus").addClass("flowers");
+            }
+        });
+
+        $("#btn2").on("click", function() {
+
+            if($("#middle-frame").hasClass("cactus")) {
+
+                $("#middle-frame").removeClass("cactus").addClass("flowers")
+                $("#right-frame").removeClass("flowers").addClass("cactus")
+
+            } else if ($("#middle-frame").hasClass("plants")){
+
+                $("#middle-frame").removeClass("plants").addClass("flowers")
+                $("#right-frame").removeClass("flowers").addClass("plants")
+            }
+        });
+
+        /** test animation div **/
+
+        $("#test-div").on("click",function() {
+            $(this).animate({width: "+= 100px"},"slow")
+        });
+
+
+
+
+
+
+
+
+
+    });
+
+
+
+</script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</body>
+</html>
