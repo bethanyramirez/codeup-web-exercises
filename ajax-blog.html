@@ -8,42 +8,111 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
+        body {
+            background-image: url("img/pipes.png");
+            color: #fff;
+            font-weight: lighter;
+
+        }
+
+        h3, h4, h1, h2 {
+            color: #ffec41;
+        }
+
         textarea {
             width: 100%;
             height: 150px;
             padding: 12px 20px;
             box-sizing: border-box;
-            border: 2px solid #ccc;
+            border: 2px solid black;
             border-radius: 4px;
             background-color: #f8f8f8;
             resize: none;
+        }
+
+
+
+        /*input {*/
+            /*width: 100%;*/
+        /*}*/
+        .publish-btn, input {
+            width: 100%;
+            border: 2px solid black;
+            padding: .5em;
+        }
+
+        .container {
+            max-width: 1100px;
+            background-color: grey;
+        }
+
+        .custom-badge {
+            background-color: #6198b3;
+            color: white;
+            font-weight: lighter;
+        }
+
+        .blog-title {
+            font-size: 4em;
+            color: #fff;
+        }
+        #categories {
+            text-align: left;
+        }
+
+        #dates {
+            float: right;
+        }
+
+        #write-blog-div{
+            width: 80%;
+            margin: 0 auto;
         }
     </style>
 
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center">Codeup Blog</h1>
+        <h1 class="text-center blog-title">Codeup Blog</h1>
         <hr>
         <div class="row">
-            <div id="posts" class="col">
+            <div id="posts" class="col-8">
 
             </div>
-            <!--<div id="right-aside" class="col-4">-->
+            <div id="right-aside" class="col-4">
+                <h4>About me</h4>
+                <p>Sweet chocolate bar jelly-o chocolate cake candy carrot cake cotton candy macaroon marzipan. Sweet roll biscuit sweet gummies topping sesame snaps tootsie roll sugar plum pie. Sweet muffin croissant chocolate cake chupa chups. </p>
+                <h4>All Categories</h4>
+                <ul>
+                    <li>Wellness</li>
+                    <li>Travel</li>
+                    <li>Beauty</li>
+                    <li>Food</li>
+                </ul>
+                <section class="mt-5">
+                    <h4>Social Media Feed</h4>
 
-            <!--</div>-->
+                </section>
+            </div>
         </div>
 
 
         <div id="write-blog-div">
-            <h3>Write a Blog Post</h3>
+            <h3 class="text-center mb-5">Write a Blog Post</h3>
             <form>
-                <input type="text" id="new-post-title">
+                <p class="text-center">Title</p>
+                <input type="text" id="new-post-title" class="mb-3 ml-2">
+                <p class="text-center">Blog Post</p>
                 <textarea id="blog-post"></textarea>
+
+
             </form>
+                <button id="publish" class="publish-btn">Publish</button>
         </div>
 
-        <button id="publish" class="btn-primary">Publish</button>
+
+
+
     </div>
     <!-- Optional JavaScript -->
 
@@ -54,28 +123,90 @@
 
     <script>
         "use strict";
-        var response = $.ajax("data/blog.json");
+        var response = $.get("data/blog.json");
+
+        /*****justins way******/
+
+        // FUNCTION TO GENERATE LIST ITEM HTML
+        // function buildCats(cats) {
+        //     var html = '';
+        //         for (var i = 0; i < cats.length; i += 1) {
+        //             html += "<span class='badge badge-light'>" + cats[i] + "</span>";
+        //         }
+        //
+        //     return html;
+        // }
+        //
+        // function buildHTML(data) {
+        //     var html = '';
+        //
+        //     items.forEach(function(data) {
+        //         html += "<div><h2>" + data.title + "</h2></div>";
+        //         html += "<div>" + data.content + "</div><br>";
+        //         html += "<div><span id='categories'>" + "Categories: " + data.categories + "</span>"
+        //         html += "<span id='dates'>" + " Date: " + data.date +"</span></div><hr>";
+        //         html += '<td>' + item.categories.join(', ') + '</td>';
+        //         html += '</tr>'
+        //     });
+        //
+        //     return html;
+        // }
+
+
+
+
+        // When response is done, loop through the data received to append to the table //
         response.done(function (data, status, jqXhr) {
 
-            console.log(data);
-            // $("#posts").html(data);
 
 
+                var html = '';
             for (var i = 0; i < data.length; i++) {
-                $("#posts").append("<div><h2>" + data[i].title + "</h2></div>"
-                    + "<div>" + data[i].content + "</div><br>"
-                    + "<div>" + "Categories: " + data[i].categories + " Date: " + data[i].date +"</div><hr>");
+
+                    html += "<div><h2>" + data[i].title + "</h2></div>";
+                    html += "<div>" + data[i].content + "</div><br>";
+                    html += "Categories: ";
+
+                for (var j = 0; j < data[i].categories.length; j++) {
+                    html += "<span id='categories' class='badge badge-pill custom-badge'>" + data[i].categories[j] + " </span> ";
+                }
+                    html += "<span id='dates'>" + " Date: " + data[i].date + "</span><hr>";
             }
+            console.log(data);
+
+
+                    $("#posts").append(html);
+
+
         });
 
+
+
+
+
+
+        /** TO POST A BLOG ENTRY **/
+
         $("#publish").on("click", function() {
+
+            // To get value of what user entered //
            var newPost = $("#blog-post").val();
            var postTitle = $("#new-post-title").val();
-           response.done(function(data) {
-               console.log("lookhere" + data);
+
+           console.log(postTitle);
+
+           response.done(function() {
+
                $("#posts").append("<h2>" + postTitle + "</h2>" + newPost + "<hr>");
+               $("#blog-post").val("");
+               $("#blog-post").val("");
+
            })
-        })
+        });
+
+        /** Random date stuff **/
+        var today = new Date();
+        console.log(today);
     </script>
 </body>
 </html>

@@ -28,13 +28,15 @@
     "use strict";
     // TODO: Create an ajax GET request for /data/inventory.json
 
-
+    // var url = "inventory.json";
+    //
+    // console.log(url);
     var response = $.ajax("data/inventory.json", {
         type: "GET"
     });
 
     console.log(response);
-
+    // var tableBody = $("#insertProducts");
 
     function onSuccess() {
         $.ajax("data/inventory.json").done(function (data, status, jqXhr) {
